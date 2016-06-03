@@ -12,45 +12,30 @@
       $eyes         = $('#eyes')
 
 	 mainTl = new TimelineMax();
-  
-	function clearStage() {
-    var clearTl = new TimelineMax();
-
-    clearTl
-        .set($head, {opacity: 0.5})
-        .set($rightEar, {opacity: 0.5})
-        .set($leftEar, {opacity: 0.5})
-        .set($headOutline, {opacity: 0, scale:0})
-        .set($mouth, {opacity: 0})
-        .set($leftAntenna, {opacity: 0})
-        .set($rightAntenna, {opacity: 0})
-        .set($lineChart, {opacity: 0});
-
-    // cleatTl.fromTo($headOutLine, 0.4, {autoAlpha:0}, {autoAlpha: 1})
-
-    return clearTl;
-  }
 
   function animate() {
     var animateTl = new TimelineMax();
 
-    // var posY = $headOutline.position().top*2;
-    // var posX = $headOutline.position().left*2;
-
-    // console.log(posX, posY);
-
     animateTl
-      .set([$rightEar, $leftEar, $mouth, $rightAntenna, $leftAntenna, $lineChart, $eyes], {autoAlpha: 0.5})
-      // .set($headOutline, {scale:0})
-      .fromTo($headOutline, 1, {opacity: 0, scale: 0.5, transformOrigin: "50% 50% 0"}, {scale: 1, opacity:1, ease:Back.easeOut});
-
-      
+      .set($leftEar, {autoAlpha: 0, xPercent: +50})
+      .set($rightEar, {autoAlpha: 0, xPercent: -50})
+      .fromTo($headOutline, 1, {opacity: 0, scale: 0.5, transformOrigin: "50% 50% 0"}, {scale: 1, opacity:1, ease:Back.easeOut})
+      .add('headOutline')
+      .to($leftEar, 0.1, {autoAlpha: 1, xPercent: 0, ease: Back.easeOut})
+      .to($rightEar, 0.1, {autoAlpha: 1, xPercent: 0, ease: Back.easeOut})
+      .add('ears')
+      .fromTo($eyes, 0.2, {opacity: 0, scale: 0.5, transformOrigin: "50% 50% 0"}, {scale: 1, opacity:1, ease:Back.easeOut})
+      .add('eyes')
+      .fromTo($mouth, 0.2, {opacity: 0, scale: 0.5, transformOrigin: "50% 50% 0"}, {scale: 1, opacity:1, ease:Back.easeOut})
+      .add('mouth')
+      .fromTo($leftAntenna, 0.2, {opacity: 0, scale: 0}, {scale: 1, opacity: 1, yPercent: -37, xPercent: -60, rotation: -28, ease:Back.easeOut})
+      .fromTo($rightAntenna, 0.2, {opacity: 0, scale: 0}, {scale: 1, opacity: 1, yPercent: -60, xPercent: -37, rotation: 33, ease:Back.easeOut})
+    
     return animateTl;
   }
 
 
 	function init() {
-    // mainTl.add(clearStage());
     mainTl.add(animate());
 	} 
 	

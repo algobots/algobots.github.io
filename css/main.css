@@ -74,8 +74,12 @@ h1, h2, h3, h4 {
 }
 
 
-#logo {
-    
+#headOutline {
+    z-index: 3;
+}
+
+#rightAntenna {
+    z-index: 2;
 }
 
 .title {    
