@@ -9,17 +9,29 @@
       $rightAntenna = $('#rightAntenna'),
       $leftAntenna  = $('#leftAntenna'),
       $lineChart    = $('#lineChart'),
-      $eyes         = $('#eyes')
+      $eyes         = $('#eyes'),
+      $lineMask     = $('#lineMask'),
+      $title        = $('.title'),
+      $blurb1        = $('.blurb1'),
+      $blurb2        = $('.blurb2'),
+      $blurb3        = $('.blurb3'),
+      $buttonContainer = $('.button-container'),
+      $button1        =$('.button1'),
+      $button2       =$('.button2'),
+      $button3        =$('.button3'),
+      $buttonSpan    = $('.bp'),
+      $buttonText    = $('.bp-text'),
+      $logo          = $('.logo')
 
 	 mainTl = new TimelineMax();
 
-  function animate() {
+  function logoLoad() {
     var animateTl = new TimelineMax();
 
     animateTl
       .set($leftEar, {autoAlpha: 0, xPercent: +50})
       .set($rightEar, {autoAlpha: 0, xPercent: -50})
-      .fromTo($headOutline, 1, {opacity: 0, scale: 0.5, transformOrigin: "50% 50% 0"}, {scale: 1, opacity:1, ease:Back.easeOut})
+      .fromTo($headOutline, 0.7, {opacity: 0, scale: 0.5, transformOrigin: "50% 50% 0"}, {scale: 1, opacity:1, ease:Back.easeOut}, '+=1')
       .add('headOutline')
       .to($leftEar, 0.1, {autoAlpha: 1, xPercent: 0, ease: Back.easeOut})
       .to($rightEar, 0.1, {autoAlpha: 1, xPercent: 0, ease: Back.easeOut})
@@ -28,17 +40,45 @@
       .add('eyes')
       .fromTo($mouth, 0.2, {opacity: 0, scale: 0.5, transformOrigin: "50% 50% 0"}, {scale: 1, opacity:1, ease:Back.easeOut})
       .add('mouth')
-      .fromTo($leftAntenna, 0.2, {opacity: 0, scale: 0}, {scale: 1, opacity: 1, yPercent: -37, xPercent: -60, rotation: -28, ease:Back.easeOut})
-      .fromTo($rightAntenna, 0.2, {opacity: 0, scale: 0}, {scale: 1, opacity: 1, yPercent: -60, xPercent: -37, rotation: 33, ease:Back.easeOut})
-    
+      .fromTo($leftAntenna, 0.2, {opacity: 0, scale: 0}, {scale: 1, opacity: 1, yPercent: -33, xPercent: -45, rotation: 0, ease:Back.easeOut})
+      .fromTo($rightAntenna, 0.2, {opacity: 0, scale: 0}, {scale: 1, opacity: 1, yPercent: -43, xPercent: 60, rotation: 70, ease:Back.easeOut})
+      .add('antenna')
+      .to($lineMask, 0.5, {width: 0, ease: Power3.easeInOut}, '-=0.2')
+      .add('line')
+      .fromTo($title, 0.5, {autoAlpha:0, scale:0}, {autoAlpha:1, scale:0.8, rotation: 0, ease: Power4.easeInOut})
+      .to($title, 2, {scale:1})
+      .add('title')
+      .fromTo($blurb1, 0.4, {xPercent: '-100'}, {xPercent:'0', ease: Power4.easeInOut}, '-=1')
+      .staggerFrom($buttonSpan, 0.3, {autoAlpha: 0, yPercent: -100, ease:Back.easeOut}, 0.1)
+      .fromTo($buttonText, 0.3, {opacity: 0}, {opacity: 1})
+      // .to($blurb1, 1, {xPercent:100}, '+=1')
+
     return animateTl;
   }
 
 
 	function init() {
-    mainTl.add(animate());
+    mainTl.add(logoLoad());
 	} 
-	
 	init();
+
+  $button1.on('click', function (e) {
+    console.log('About Us Clicked');
+  });
+
+  $button2.on('click', function (e) {
+    console.log('Price');
+
+    var closeTl = new TimelineMax()
+
+    closeTl
+      .to($logo, 0.4, {scale:0, autoAlpha: 0});
+
+      mainTl.add(closeTl);
+  });
+
+  $button3.on('click', function (e) {
+    console.log('Contact Us');
+  });
 
 })(jQuery);

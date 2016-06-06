@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="268" height="460" viewBox="0 0 268 460" version="1.1">
+  <title>
+    Logo
+  </title>
+  <desc>
+    Created with Sketch.
+  </desc>
+  <defs>
+    <rect id="path-1" x="220" y="148.83" width="47" height="69.28" rx="8"/>
+    <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="47" height="69.28" fill="white">
+      <use xlink:href="#path-1"/>
+    </mask>
+    <rect id="path-3" x="0" y="148.83" width="47" height="69.28" rx="8"/>
+    <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="47" height="69.28" fill="white">
+      <use xlink:href="#path-3"/>
+    </mask>
+  </defs>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Algobots" transform="translate(-556.000000, -119.000000)">
+      <g id="Logo" transform="translate(674.210433, 371.445578) rotate(-29.000000) translate(-674.210433, -371.445578) translate(472.210433, 120.945578)">
+        <g id="head" transform="translate(193.690447, 297.527966) rotate(29.000000) translate(-193.690447, -297.527966) translate(60.190447, 140.027966)" stroke="#39302E">
+          <use id="rightEar" mask="url(#mask-2)" stroke-width="16" fill="#FEC825" xlink:href="#path-1"/>
+          <use id="leftEar" mask="url(#mask-4)" stroke-width="16" fill="#FEC825" xlink:href="#path-3"/>
+          <g id="right-antenna" transform="translate(216.498370, 45.182585) rotate(65.000000) translate(-216.498370, -45.182585) translate(185.998370, 3.682585)" stroke-width="6">
+            <ellipse id="Oval-5" fill="#FEC825" cx="16.46" cy="17.35" rx="16" ry="16.55"/>
+            <path d="M60.5 82.21L25.5 30.51" id="Line" stroke-linecap="square"/>
+          </g>
+          <g id="left-antenna" transform="translate(47.000000, 48.346379) rotate(1.000000) translate(-47.000000, -48.346379) translate(17.000000, 6.846379)" stroke-width="6">
+            <ellipse id="Oval-5" fill="#FEC825" cx="16.45" cy="16.67" rx="16" ry="16.55"/>
+            <path d="M59.5 82.21L24.5 30.51" id="Line" stroke-linecap="square"/>
+          </g>
+          <polygon id="headOutline" stroke-width="8" fill="#FEC825" points="133 63 238 125.88 238 251.64 133 314.52 28 251.64 28 125.88"/>
+          <path d="M186.89 178.91C187.4 178.85 187.91 178.82 188.44 178.82 197.58 178.82 205 188.77 205 201.05 205 213.33 197.58 223.28 188.44 223.28 187.91 223.28 187.4 223.25 186.89 223.18 186.48 223.25 186.07 223.28 185.64 223.28L79 223.28C78.78 223.28 78.57 223.27 78.36 223.26 78.1 223.27 77.83 223.28 77.56 223.28 68.42 223.28 61 213.33 61 201.05 61 188.77 68.42 178.82 77.56 178.82 77.83 178.82 78.1 178.82 78.36 178.84 78.57 178.82 78.78 178.82 79 178.82L185.64 178.82C186.07 178.82 186.48 178.85 186.89 178.91Z" id="eyes" stroke-width="8" fill="#39302E"/>
+          <path d="M103.5 276.02C103.36 274.86 143.26 278.98 153.32 277.71 163.38 276.44 161 270.99 161 270.99" id="mouth" stroke-width="8" stroke-linecap="square"/>
+        </g>
+        <g id="lineChartGroup" transform="translate(294.236384, 114.425562) rotate(29.000000) translate(-294.236384, -114.425562) translate(218.236384, 26.425562)">
+          <polyline id="lineChart" stroke="#39302E" stroke-width="6" transform="translate(76.355317, 88.188753) rotate(1.000000) translate(-76.355317, -88.188753) " points="16.54 138.13 28.16 106.01 59.56 152.2 107.45 24.18 136.17 95.56"/>
+          <rect id="lineMask" fill="#FEC825" x="0" y="0" width="152" height="176"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

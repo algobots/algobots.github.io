@@ -1,46 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="268" height="446" viewBox="0 0 268 446" version="1.1">
-  <title>
-    Logo
-  </title>
-  <desc>
-    Created with Sketch.
-  </desc>
-  <defs>
-    <rect id="path-1" x="0" y="0.83" width="47" height="69.28" rx="8"/>
-    <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="47" height="69.28" fill="white">
-      <use xlink:href="#path-1"/>
-    </mask>
-    <rect id="path-3" x="0" y="0.83" width="47" height="69.28" rx="8"/>
-    <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="47" height="69.28" fill="white">
-      <use xlink:href="#path-3"/>
-    </mask>
-  </defs>
-  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    <g id="Algobots" transform="translate(-556.000000, -131.000000)" stroke="#39302E">
-      <g id="Logo" transform="translate(689.993807, 417.975704) rotate(-29.000000) translate(-689.993807, -417.975704) translate(425.493807, 148.975704)">
-        <g id="Group-3" transform="translate(264.752877, 277.925798) rotate(60.000000) translate(-264.752877, -277.925798) translate(78.252877, 80.925798)">
-          <g id="head" transform="translate(193.419493, 216.986254) rotate(-31.000000) translate(-193.419493, -216.986254) translate(59.919493, 90.986254)">
-            <g id="Right-Ear" transform="translate(220.000000, 85.000000)" stroke-width="16" fill="#FEC825">
-              <use id="Rectangle-18" mask="url(#mask-2)" xlink:href="#path-1"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="268px" height="460px" viewBox="0 0 268 460" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="220" y="148.827655" width="47" height="69.2825651" rx="8"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="47" height="69.2825651" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="-4.54747351e-13" y="148.827655" width="47" height="69.2825651" rx="8"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="47" height="69.2825651" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Algobots" transform="translate(-556.000000, -119.000000)">
+            <g id="Logo" transform="translate(674.210433, 371.445578) rotate(-29.000000) translate(-674.210433, -371.445578) translate(472.210433, 120.945578)">
+                <g id="head" transform="translate(193.690447, 297.527966) rotate(29.000000) translate(-193.690447, -297.527966) translate(60.190447, 140.027966)" stroke="#39302E">
+                    <use id="rightEar" mask="url(#mask-2)" stroke-width="16" fill="#FEC825" xlink:href="#path-1"></use>
+                    <use id="leftEar" mask="url(#mask-4)" stroke-width="16" fill="#FEC825" xlink:href="#path-3"></use>
+                    <g id="right-antenna" transform="translate(216.498370, 45.182585) rotate(65.000000) translate(-216.498370, -45.182585) translate(185.998370, 3.682585)" stroke-width="6">
+                        <ellipse id="Oval-5" fill="#FEC825" cx="16.4603107" cy="17.3480037" rx="16" ry="16.5450902"></ellipse>
+                        <path d="M60.5,82.2084168 L25.5,30.50501" id="Line" stroke-linecap="square"></path>
+                    </g>
+                    <g id="left-antenna" transform="translate(47.000000, 48.346379) rotate(1.000000) translate(-47.000000, -48.346379) translate(17.000000, 6.846379)" stroke-width="6">
+                        <ellipse id="Oval-5" fill="#FEC825" cx="16.4537023" cy="16.673865" rx="16" ry="16.5450902"></ellipse>
+                        <path d="M59.5,82.2084168 L24.5,30.50501" id="Line" stroke-linecap="square"></path>
+                    </g>
+                    <polygon id="headOutline" stroke-width="8" fill="#FEC825" points="133 63 238 125.881185 238 251.643555 133 314.52474 28 251.643555 28 125.881185"></polygon>
+                    <path d="M186.887012,178.911767 C187.397476,178.848151 187.914659,178.815631 188.4375,178.815631 C197.584716,178.815631 205,188.769445 205,201.048096 C205,213.326748 197.584716,223.280561 188.4375,223.280561 C187.914399,223.280561 187.396963,223.248009 186.886253,223.184331 C186.481099,223.24768 186.065947,223.280561 185.643226,223.280561 L78.9996314,223.280561 C78.7840521,223.280561 78.5704645,223.272032 78.3591876,223.255292 C78.095196,223.272075 77.8295863,223.280561 77.5625,223.280561 C68.4152838,223.280561 61,213.326748 61,201.048096 C61,188.769445 68.4152838,178.815631 77.5625,178.815631 C77.8297306,178.815631 78.095483,178.824127 78.3596155,178.840927 C78.5707743,178.82417 78.7842201,178.815631 78.9996314,178.815631 L185.643226,178.815631 C186.066295,178.815631 186.481694,178.84848 186.887012,178.911767 Z" id="eyes" stroke-width="8" fill="#39302E"></path>
+                    <path d="M103.5,276.018036 C103.359799,274.85822 143.260977,278.980379 153.320228,277.707943 C163.379478,276.435508 160.998167,270.991048 160.998167,270.991048" id="mouth" stroke-width="8" stroke-linecap="square"></path>
+                </g>
+                <g id="lineChartGroup" transform="translate(294.236384, 114.425562) rotate(29.000000) translate(-294.236384, -114.425562) translate(218.236384, 26.425562)">
+                    <polyline id="lineChart" stroke="#39302E" stroke-width="6" transform="translate(76.355317, 88.188753) rotate(1.000000) translate(-76.355317, -88.188753) " points="16.5405622 138.130846 28.1598426 106.008238 59.5629904 152.19886 107.449483 24.1786465 136.170072 95.55808"></polyline>
+                    <rect id="lineMask" fill="#FEC825" x="2.55795385e-13" y="-2.84217094e-13" width="152" height="176"></rect>
+                </g>
             </g>
-            <g id="Left-Ear" transform="translate(-0.000000, 85.000000)" stroke-width="16" fill="#FEC825">
-              <use id="Rectangle-18" mask="url(#mask-4)" xlink:href="#path-3"/>
-            </g>
-            <polygon id="headOutline" stroke-width="8" fill="#FEC825" points="133 0 238 62.88 238 188.64 133 251.52 28 188.64 28 62.88"/>
-            <path d="M186.89 115.91C187.4 115.85 187.91 115.82 188.44 115.82 197.58 115.82 205 125.77 205 138.05 205 150.33 197.58 160.28 188.44 160.28 187.91 160.28 187.4 160.25 186.89 160.18 186.48 160.25 186.07 160.28 185.64 160.28L79 160.28C78.78 160.28 78.57 160.27 78.36 160.26 78.1 160.27 77.83 160.28 77.56 160.28 68.42 160.28 61 150.33 61 138.05 61 125.77 68.42 115.82 77.56 115.82 77.83 115.82 78.1 115.82 78.36 115.84 78.57 115.82 78.78 115.82 79 115.82L185.64 115.82C186.07 115.82 186.48 115.85 186.89 115.91Z" id="Eyes" stroke-width="8" fill="#39302E"/>
-            <path d="M103.5 213.02C103.36 211.86 143.26 215.98 153.32 214.71 163.38 213.44 161 207.99 161 207.99" id="Mouth" stroke-width="8" stroke-linecap="square"/>
-          </g>
-          <g id="right-antenna" transform="translate(194.894852, 52.384032) rotate(34.000000) translate(-194.894852, -52.384032) translate(164.394852, 10.884032)" stroke-width="6">
-            <ellipse id="Oval-5" fill="#FEC825" cx="16.46" cy="17.35" rx="16" ry="16.55"/>
-            <path d="M60.5 82.21L25.5 30.51" id="Line" stroke-linecap="square"/>
-          </g>
-          <g id="left-antenna" transform="translate(46.802128, 144.720201) rotate(-28.000000) translate(-46.802128, -144.720201) translate(16.802128, 103.220201)" stroke-width="6">
-            <ellipse id="Oval-5" fill="#FEC825" cx="16.45" cy="16.67" rx="16" ry="16.55"/>
-            <path d="M59.5 82.21L24.5 30.51" id="Line" stroke-linecap="square"/>
-          </g>
         </g>
-        <polyline id="Path-5" stroke-width="6" transform="translate(370.316737, 84.335316) rotate(27.000000) translate(-370.316737, -84.335316) " points="310.5 134.28 322.12 102.15 353.52 148.35 401.41 20.33 430.13 91.7"/>
-      </g>
     </g>
-  </g>
 </svg>

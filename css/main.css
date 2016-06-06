@@ -67,10 +67,13 @@ h1, h2, h3, h4 {
 } 
 
 .wrapper {
-    position: absolute;
-    top: 35%;
+    width: 90%;
+    margin: 0 auto;
+    position: fixed;
+    top: 30%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
+    text-align: center;
 }
 
 
@@ -82,23 +85,140 @@ h1, h2, h3, h4 {
     z-index: 2;
 }
 
-.title {    
+.title {   
+    padding-top: 30px;
+    margin: auto;
     font-size: 40px;
+    
+}
+
+#lineMask {
+    position: absolute;
+    z-index: 1;
+}
+
+.logo {
+    margin-left: 5px;
 }
 
 
+.button-container {
+    position: relative;
+}
 
+a.button1 {
+    text-decoration: none;
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    color: rgba(255,255,255,0.7);
+    padding: 8px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+}
 
+a.button2 {
+    text-decoration: none;
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    color: rgba(255,255,255,0.7);
+    padding: 8px 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
+a.button3 {
+    text-decoration: none;
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    color: rgba(255,255,255,0.7);
+    padding: 8px 0;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translateX(-100%);
+}
 
+.bp {
+    width: 50px;
+    height: 100%;
+    border: 2px rgba(255,255,255,1) solid;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
 
+.bp-mid {
+    left: 50px;
+    border-width: 1px 0;
+}
+
+.bp-left {
+    border-width: 1px 0 1px 1px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.bp-right {
+    left: auto;
+    right: 0;
+    border-width: 1px 1px 1px 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
 
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 1000px) {
+
+    a.button1 {
+        text-decoration: none;
+        width: 150px;
+        display: block;
+        margin: 0 auto;
+        color: rgba(255,255,255,0.7);
+        padding: 8px 0;
+        position: absolute;
+        top: 0;
+        left: 30%;
+        transform: translateX(-30%);
+    }
+
+    a.button2 {
+        text-decoration: none;
+        width: 150px;
+        display: block;
+        margin: 0 auto;
+        color: rgba(255,255,255,0.7);
+        padding: 8px 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    a.button3 {
+        text-decoration: none;
+        width: 150px;
+        display: block;
+        margin: 0 auto;
+        color: rgba(255,255,255,0.7);
+        padding: 8px 0;
+        position: absolute;
+        top: 0;
+        left: 70%;
+        transform: translateX(-70%);
+    }
 
 }
 

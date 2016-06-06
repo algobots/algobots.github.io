@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="152px" height="176px" viewBox="0 0 152 176" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>lineChartGroup</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Algobots" transform="translate(-619.000000, -111.000000)">
+            <g id="lineChartGroup" transform="translate(619.000000, 111.000000)">
+                <rect id="lineMask" fill="#FEC825" x="0" y="-1.13686838e-13" width="152" height="176"></rect>
+                <polyline id="lineChart" stroke="#39302E" stroke-width="6" transform="translate(76.355317, 88.188753) rotate(1.000000) translate(-76.355317, -88.188753) " points="16.5405622 138.130846 28.1598426 106.008238 59.5629904 152.19886 107.449483 24.1786465 136.170072 95.55808"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
