@@ -1,7 +1,6 @@
 (function($) {
 
   // Set variables
-
 	var $rightEar     = $('#rightEar'),
       $leftEar      = $('#leftEar'),
       $headOutline  = $('#headOutline'),
@@ -25,9 +24,10 @@
 
 	 mainTl = new TimelineMax();
 
-  function logoLoad() {
+   // helpers
+  function loadLogo() {
     var animateTl = new TimelineMax();
-
+    
     animateTl
       .set($leftEar, {autoAlpha: 0, xPercent: +50})
       .set($rightEar, {autoAlpha: 0, xPercent: -50})
@@ -49,36 +49,61 @@
       .to($title, 2, {scale:1})
       .add('title')
       .fromTo($blurb1, 0.4, {xPercent: '-100'}, {xPercent:'0', ease: Power4.easeInOut}, '-=1')
+      .add('blurb')
+
+    mainTl.add(animateTl);
+  }
+
+  function loadButtons() {
+    mainTl
       .staggerFrom($buttonSpan, 0.3, {autoAlpha: 0, yPercent: -100, ease:Back.easeOut}, 0.1)
       .fromTo($buttonText, 0.3, {opacity: 0}, {opacity: 1})
-      // .to($blurb1, 1, {xPercent:100}, '+=1')
+      .add('button')
+  }
 
-    return animateTl;
+  function closeAnimation(element) {
+    var closeTl = new TimelineMax()
+    closeTl
+      .to(element, 0.4, {scale:0, autoAlpha: 0}); 
+    
+    mainTl.add(closeTl);
+  }
+
+  function loadPricing() {
+    
+  }
+
+  function resetLogo() {
+    mainTl
+      .to($logo, 0, {scale:1, autoAlpha: 1})
+      .to($lineMask,0,{width:152})
+  }
+
+  function minimizeLogo() {
+    mainTl
+      .to($logo, 0.4, {scale:0.5, top:0, left:0})
   }
 
 
-	function init() {
-    mainTl.add(logoLoad());
-	} 
-	init();
 
+  // Onclick functions
   $button1.on('click', function (e) {
     console.log('About Us Clicked');
+    closeAnimation($logo);
   });
 
   $button2.on('click', function (e) {
     console.log('Price');
 
-    var closeTl = new TimelineMax()
-
-    closeTl
-      .to($logo, 0.4, {scale:0, autoAlpha: 0});
-
-      mainTl.add(closeTl);
+    closeAnimation($logo);
   });
 
   $button3.on('click', function (e) {
     console.log('Contact Us');
   });
+
+  //init
+  loadLogo();
+  loadButtons();
 
 })(jQuery);

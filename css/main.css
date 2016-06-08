@@ -87,9 +87,14 @@ h1, h2, h3, h4 {
 
 .title {   
     padding-top: 30px;
+    /*padding-bottom: 10px;*/
     margin: auto;
     font-size: 40px;
     
+}
+
+.blurb1 {
+    margin-bottom: 50px;
 }
 
 #lineMask {
@@ -101,52 +106,69 @@ h1, h2, h3, h4 {
     margin-left: 5px;
 }
 
+/* =Button Code */
 
 .button-container {
     position: relative;
+    width: 300px;
+    height:150px;
+    text-align: center;
 }
 
 a.button1 {
     text-decoration: none;
-    width: 100px;
+    width: 117px;
     display: block;
     margin: 0 auto;
     color: rgba(255,255,255,0.7);
     padding: 8px 0;
     position: absolute;
     top: 0;
-    left: 0;
-    transform: translateX(0);
+    /*left: 0;
+    transform: translateX(0);*/
 }
 
 a.button2 {
     text-decoration: none;
-    width: 100px;
+    width: 117px;
     display: block;
     margin: 0 auto;
     color: rgba(255,255,255,0.7);
     padding: 8px 0;
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    /*left: 25%;
+    transform: translateX(-25%);*/
 }
 
 a.button3 {
     text-decoration: none;
-    width: 100px;
+    width: 117px;
     display: block;
     margin: 0 auto;
     color: rgba(255,255,255,0.7);
     padding: 8px 0;
     position: absolute;
     top: 0;
-    left: 100%;
-    transform: translateX(-100%);
+   /* left: 50%;
+    transform: translateX(-50%);*/
+}
+
+a.button4 {
+    text-decoration: none;
+    width: 117px;
+    display: block;
+    margin: 0 auto;
+    color: rgba(255,255,255,0.7);
+    padding: 8px 0;
+    position: absolute;
+    top: 0;
+   /* left: 75%;
+    transform: translateX(-75%);*/
 }
 
 .bp {
-    width: 50px;
+    width: 35px;
     height: 100%;
     border: 2px rgba(255,255,255,1) solid;
     position: absolute;
@@ -156,24 +178,23 @@ a.button3 {
 }
 
 .bp-mid {
-    left: 50px;
-    border-width: 1px 0;
+    left: 37px;
+    border-width: 2.5px 0;
 }
 
 .bp-left {
-    border-width: 1px 0 1px 1px;
+    border-width: 2.5px 0 2.5px 2.5px;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
 }
 
 .bp-right {
-    left: auto;
+    left: 72px;
     right: 0;
-    border-width: 1px 1px 1px 0;
+    border-width: 2.5px 2.5px 2.5px 0;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
-
 
 /* ==========================================================================
    Media Queries
@@ -183,43 +204,61 @@ a.button3 {
 
     a.button1 {
         text-decoration: none;
-        width: 150px;
+        width: 117px;
         display: block;
         margin: 0 auto;
         color: rgba(255,255,255,0.7);
         padding: 8px 0;
         position: absolute;
         top: 0;
-        left: 30%;
-        transform: translateX(-30%);
+        left: 0px;
+        /*transform: translateX(-30%);*/
     }
 
     a.button2 {
         text-decoration: none;
-        width: 150px;
+        width: 117px;
         display: block;
         margin: 0 auto;
         color: rgba(255,255,255,0.7);
         padding: 8px 0;
         position: absolute;
         top: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 126px;
+        /*transform: translateX(-40%);*/
     }
 
     a.button3 {
         text-decoration: none;
-        width: 150px;
+        width: 117px;
         display: block;
         margin: 0 auto;
         color: rgba(255,255,255,0.7);
         padding: 8px 0;
         position: absolute;
         top: 0;
-        left: 70%;
-        transform: translateX(-70%);
+        left: 251px;
+        /*transform: translateX(-50%);*/
     }
 
+    a.button4 {
+        text-decoration: none;
+        width: 117px;
+        display: block;
+        margin: 0 auto;
+        color: rgba(255,255,255,0.7);
+        padding: 8px 0;
+        position: absolute;
+        top: 0;
+        left: 378px;
+        /*transform: translateX(-65%);*/
+    }
+
+    .button-container {
+        width: 489px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 @media print,
