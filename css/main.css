@@ -109,62 +109,63 @@ h1, h2, h3, h4 {
 /* =Button Code */
 
 .button-container {
-    position: relative;
-    width: 300px;
-    height:150px;
-    text-align: center;
+    position: relative;    
+    width: 489px;
+    left: 50%;
+    transform: translateX(-50%);
+    
 }
 
 a.button1 {
     text-decoration: none;
-    width: 117px;
+    width: 108px;
     display: block;
     margin: 0 auto;
     color: rgba(255,255,255,0.7);
     padding: 8px 0;
     position: absolute;
     top: 0;
-    /*left: 0;
-    transform: translateX(0);*/
+    left: 0px;
+    /*transform: translateX(-30%);*/
 }
 
 a.button2 {
     text-decoration: none;
-    width: 117px;
+    width: 108px;
     display: block;
     margin: 0 auto;
     color: rgba(255,255,255,0.7);
     padding: 8px 0;
     position: absolute;
     top: 0;
-    /*left: 25%;
-    transform: translateX(-25%);*/
+    left: 126px;
+    /*transform: translateX(-40%);*/
 }
 
 a.button3 {
     text-decoration: none;
-    width: 117px;
+    width: 108px;
     display: block;
     margin: 0 auto;
     color: rgba(255,255,255,0.7);
     padding: 8px 0;
     position: absolute;
     top: 0;
-   /* left: 50%;
-    transform: translateX(-50%);*/
+    left: 251px;
+    /*transform: translateX(-50%);*/
 }
 
 a.button4 {
     text-decoration: none;
-    width: 117px;
+    width: 108px;
     display: block;
     margin: 0 auto;
     color: rgba(255,255,255,0.7);
     padding: 8px 0;
     position: absolute;
     top: 0;
-   /* left: 75%;
-    transform: translateX(-75%);*/
+    left: 378px;
+    /*transform: translateX(-65%);*/
 }
 
 .bp {
@@ -196,6 +197,11 @@ a.button4 {
     border-bottom-right-radius: 3px;
 }
 
+.bp-text {
+    font-weight: bold;
+    font-size: 16px;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -204,7 +210,7 @@ a.button4 {
 
     a.button1 {
         text-decoration: none;
-        width: 117px;
+        width: 110px;
         display: block;
         margin: 0 auto;
         color: rgba(255,255,255,0.7);
@@ -217,7 +223,7 @@ a.button4 {
 
     a.button2 {
         text-decoration: none;
-        width: 117px;
+        width: 110px;
         display: block;
         margin: 0 auto;
         color: rgba(255,255,255,0.7);
@@ -230,7 +236,7 @@ a.button4 {
 
     a.button3 {
         text-decoration: none;
-        width: 117px;
+        width: 110px;
         display: block;
         margin: 0 auto;
         color: rgba(255,255,255,0.7);
@@ -243,7 +249,7 @@ a.button4 {
 
     a.button4 {
         text-decoration: none;
-        width: 117px;
+        width: 110px;
         display: block;
         margin: 0 auto;
         color: rgba(255,255,255,0.7);
