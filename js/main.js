@@ -18,6 +18,7 @@
       $button1        =$('.button1'),
       $button2       =$('.button2'),
       $button3        =$('.button3'),
+      $button4       =$('.button4'),
       $buttonSpan    = $('.bp'),
       $buttonText    = $('.bp-text'),
       $logo          = $('.logo')
@@ -48,7 +49,8 @@
       .fromTo($title, 0.5, {autoAlpha:0, scale:0}, {autoAlpha:1, scale:0.8, rotation: 0, ease: Power4.easeInOut})
       .to($title, 2, {scale:1})
       .add('title')
-      .fromTo($blurb1, 0.4, {xPercent: '-100'}, {xPercent:'0', ease: Power4.easeInOut}, '-=1')
+      .fromTo($blurb1, 0.4, {xPercent: '-100'}, {xPercent:'-5', ease: Power4.easeInOut}, '-=1')
+      // .to($blurb1, 1, {vars})
       .add('blurb')
 
     mainTl.add(animateTl);
@@ -84,22 +86,32 @@
       .to($logo, 0.4, {scale:0.5, top:0, left:0})
   }
 
+  function handleButtonClick(button) {
+       mainTl
+      .set([$button1, $button2, $button3, $button4], {className:'-=active'})
+      .set([$button1, $button2, $button3, $button4], {className:'+=inactive'})
+      .set(button, {className:'+=active'})
+      .set(button, {className:'-=inactive'})
+  }
 
 
   // Onclick functions
   $button1.on('click', function (e) {
-    console.log('About Us Clicked');
-    closeAnimation($logo);
+    // closeAnimation($logo);
+    handleButtonClick($button1);
   });
 
   $button2.on('click', function (e) {
-    console.log('Price');
-
+    handleButtonClick($button2);
     closeAnimation($logo);
   });
 
   $button3.on('click', function (e) {
-    console.log('Contact Us');
+    handleButtonClick($button3);
+  });
+
+  $button4.on('click', function (e) {
+    handleButtonClick($button4);
   });
 
   //init

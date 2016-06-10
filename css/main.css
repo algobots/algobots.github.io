@@ -190,6 +190,12 @@ a.button4 {
     background-color: #39302E;
 }
 
+.inactive>.bp-text:hover {
+    /*color: #39302E;*/
+}
+
+
+
 .bp:hover ~ .bp{
     
 }
