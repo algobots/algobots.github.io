@@ -113,7 +113,6 @@ h1, h2, h3, h4 {
     width: 489px;
     left: 50%;
     transform: translateX(-50%);
-    
 }
 
 a.button1 {
@@ -127,6 +126,14 @@ a.button1 {
     top: 0;
     left: 0px;
     /*transform: translateX(-30%);*/
+}
+
+a.button1.active {
+
+} 
+
+a.button1:hover {
+
 }
 
 a.button2 {
@@ -169,7 +176,7 @@ a.button4 {
 }
 
 .bp {
-    width: 35px;
+    width: 37px;
     height: 100%;
     border: 2px rgba(255,255,255,1) solid;
     position: absolute;
@@ -178,8 +185,17 @@ a.button4 {
     bottom: 0;
 }
 
+.active>.bp {
+    border:none;
+    background-color: #39302E;
+}
+
+.bp:hover ~ .bp{
+    
+}
+
 .bp-mid {
-    left: 37px;
+    left: 36px;
     border-width: 2.5px 0;
 }
 
@@ -198,8 +214,10 @@ a.button4 {
 }
 
 .bp-text {
+    position: relative;
     font-weight: bold;
     font-size: 16px;
+    z-index:1;
 }
 
 /* ==========================================================================
