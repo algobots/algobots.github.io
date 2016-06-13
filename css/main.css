@@ -121,17 +121,62 @@ Pledge
 
 .pledge {
     height: 504px;
+    width: 490px;
+    margin: auto;
+}
+
+.security-container {
+    height: 220px;
+}
+
+.securityTitle {
+    float: right;
+    position: relative;
+    right: 182px;
+    
 }
 
 .securityImage {
+    height: 177px;
     position: relative;
-    left: -190px;
+    margin: auto;
+    float: left;
+    top: 20px;
+}
+
+.securityBlurb {
+    width: 61%;
+    float: right;
+    margin: auto;
+    text-align: left;
+} 
+
+.trust-container {
+    height: 270px;    
+
 }
 
 .trustImage {
     position: relative;
-    left: -190px;
-    top: 73px;
+    float: left;
+    top: 40px;
+    left: -19px;
+}
+
+.trustTitle {
+    float: right;
+    position: relative;
+    right: 226px;
+    top: 20px;
+}
+
+.trustBlurb {
+    width: 61%;
+    float: right;
+    margin: auto;
+    text-align: left;
+    top: 20px;
+    position: relative;
 }
 
 /*=============
