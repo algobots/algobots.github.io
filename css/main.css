@@ -76,6 +76,15 @@ h1, h2, h3, h4 {
     text-align: center;
 }
 
+.hide {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+/*=============
+Logo
+=============*/
 
 #headOutline {
     z-index: 3;
@@ -106,10 +115,31 @@ h1, h2, h3, h4 {
     margin-left: 5px;
 }
 
-/* =Button Code */
+/*=============
+Pledge
+=============*/
+
+.pledge {
+    height: 504px;
+}
+
+.securityImage {
+    position: relative;
+    left: -190px;
+}
+
+.trustImage {
+    position: relative;
+    left: -190px;
+    top: 73px;
+}
+
+/*=============
+Button code
+=============*/
 
 .button-container {
-    position: relative;    
+    position: fixed;    
     width: 489px;
     left: 50%;
     transform: translateX(-50%);
@@ -126,14 +156,6 @@ a.button1 {
     top: 0;
     left: 0px;
     /*transform: translateX(-30%);*/
-}
-
-a.button1.active {
-
-} 
-
-a.button1:hover {
-
 }
 
 a.button2 {
@@ -188,16 +210,6 @@ a.button4 {
 .active>.bp {
     border:none;
     background-color: #39302E;
-}
-
-.inactive>.bp-text:hover {
-    /*color: #39302E;*/
-}
-
-
-
-.bp:hover ~ .bp{
-    
 }
 
 .bp-mid {
@@ -285,6 +297,7 @@ a.button4 {
     }
 
     .button-container {
+        position: absolute;
         width: 489px;
         left: 50%;
         transform: translateX(-50%);

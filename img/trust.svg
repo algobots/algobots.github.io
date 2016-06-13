@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="212px" height="235px" viewBox="0 0 212 235" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>trust</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Algobots" transform="translate(-361.000000, -488.000000)">
+            <g id="trust" transform="translate(326.000000, 488.000000)">
+                <g id="Group">
+                    <polygon id="Shape" points="0 0 282 0 282 282 0 282"></polygon>
+                    <path d="M140.75,0 C153.675,0 164.25,10.575 164.25,23.5 C164.25,36.425 153.675,47 140.75,47 C127.825,47 117.25,36.425 117.25,23.5 C117.25,10.575 127.825,0 140.75,0 L140.75,0 Z M246.5,82.25 L176,82.25 L176,235 L152.5,235 L152.5,164.5 L129,164.5 L129,235 L105.5,235 L105.5,82.25 L35,82.25 L35,58.75 L246.5,58.75 L246.5,82.25 L246.5,82.25 Z" id="Shape" fill="#39302E"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
