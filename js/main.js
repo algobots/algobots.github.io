@@ -1,6 +1,9 @@
 (function($) {
 
-  // Set variables
+  // ===================
+  // =Set variables
+  // ===================
+
 	var $rightEar     = $('#rightEar'),
       $leftEar      = $('#leftEar'),
       $headOutline  = $('#headOutline'),
@@ -21,11 +24,18 @@
       $button4       =$('.button4'),
       $buttonSpan    = $('.bp'),
       $buttonText    = $('.bp-text'),
-      $logo          = $('.logo')
+      $logo          = $('.logo'),
+      $bp1           = $('.bp1'),
+      $bp2           = $('.bp2'),
+      $bp3           = $('.bp3'),
+      $bp4           = $('.bp4')
 
 	 mainTl = new TimelineMax();
-
-   // =HELPERS
+   
+   // ===================
+   // =ANIMATION HELPERS
+   // ===================
+  
   function loadLogo() {
     var animateTl = new TimelineMax();
     
@@ -107,8 +117,10 @@
   }
 
 
+  // =======================
+  // =ONCLICK FUNCTIONS
+  // =======================
 
-  // ONCLICK FUNCTIONS
   $button1.on('click', function (e) {
     // closeAnimation($logo);
     handleButtonClick($button1);
@@ -127,10 +139,58 @@
     handleButtonClick($button4);
   });
 
+
+  // =======================
   // HOVER FUNCTIONS
+  // =======================
 
-  $button1.hover(over, out);
+  $button1.hover(
+    function() {
+      if($button1.attr('class').split(' ')[1] === 'inactive') {
+        TweenLite.to($bp1, 0.2, {scale:1.2});  
+      } 
+    },
+    function() {
+      TweenLite.to($bp1, 0.4, {scale:1});
+    }
+  );
 
+  $button2.hover(
+    function() {
+      if($button2.attr('class').split(' ')[1] === 'inactive') {
+        TweenLite.to($bp2, 0.2, {scale:1.2});  
+      } 
+    },
+    function() {
+      TweenLite.to($bp2, 0.4, {scale:1});
+    }
+  );
+
+  $button3.hover(
+    function() {
+      if($button3.attr('class').split(' ')[1] === 'inactive') {
+        TweenLite.to($bp3, 0.2, {scale:1.2});  
+      } 
+    },
+    function() {
+      TweenLite.to($bp3, 0.4, {scale:1});
+    }
+  );
+
+  $button4.hover(
+    function() {
+      if($button4.attr('class').split(' ')[1] === 'inactive') {
+        TweenLite.to($bp4, 0.2, {scale:1.2});  
+      } 
+    },
+    function() {
+      TweenLite.to($bp4, 0.4, {scale:1});
+    }
+  );
+
+  // =======================
+  // LIFE CYCLE FUNCTIONS
+  // =======================
 
   //init
   loadLogo();
