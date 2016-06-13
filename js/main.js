@@ -25,7 +25,7 @@
 
 	 mainTl = new TimelineMax();
 
-   // helpers
+   // =HELPERS
   function loadLogo() {
     var animateTl = new TimelineMax();
     
@@ -49,7 +49,7 @@
       .fromTo($title, 0.5, {autoAlpha:0, scale:0}, {autoAlpha:1, scale:0.8, rotation: 0, ease: Power4.easeInOut})
       .to($title, 2, {scale:1})
       .add('title')
-      .fromTo($blurb1, 0.4, {xPercent: '-100'}, {xPercent:'-5', ease: Power4.easeInOut}, '-=1')
+      .fromTo($blurb1, 0.4, {xPercent: '-100'}, {xPercent:'0', ease: Power4.easeInOut}, '-=1')
       // .to($blurb1, 1, {vars})
       .add('blurb')
 
@@ -94,8 +94,21 @@
       .set(button, {className:'-=inactive'})
   }
 
+  function over (button) {
+    
+    if($button1.attr('class').split(' ')[1] === 'inactive') {
+    
+        // TweenLite.to($(this), 0.4, {scale:1.1});
+    
+    
+        // TweenLite.to($(this), 0.4, {scale:1});
+    
+    }  
+  }
 
-  // Onclick functions
+
+
+  // ONCLICK FUNCTIONS
   $button1.on('click', function (e) {
     // closeAnimation($logo);
     handleButtonClick($button1);
@@ -113,6 +126,11 @@
   $button4.on('click', function (e) {
     handleButtonClick($button4);
   });
+
+  // HOVER FUNCTIONS
+
+  $button1.hover(over, out);
+
 
   //init
   loadLogo();

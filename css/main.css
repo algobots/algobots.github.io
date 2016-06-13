@@ -120,7 +120,7 @@ a.button1 {
     width: 108px;
     display: block;
     margin: 0 auto;
-    color: rgba(255,255,255,0.7);
+    color: white;
     padding: 8px 0;
     position: absolute;
     top: 0;
@@ -141,7 +141,7 @@ a.button2 {
     width: 108px;
     display: block;
     margin: 0 auto;
-    color: rgba(255,255,255,0.7);
+    color: white;
     padding: 8px 0;
     position: absolute;
     top: 0;
@@ -154,7 +154,7 @@ a.button3 {
     width: 108px;
     display: block;
     margin: 0 auto;
-    color: rgba(255,255,255,0.7);
+    color: white;
     padding: 8px 0;
     position: absolute;
     top: 0;
@@ -167,7 +167,7 @@ a.button4 {
     width: 108px;
     display: block;
     margin: 0 auto;
-    color: rgba(255,255,255,0.7);
+    color: white;
     padding: 8px 0;
     position: absolute;
     top: 0;
@@ -237,7 +237,7 @@ a.button4 {
         width: 110px;
         display: block;
         margin: 0 auto;
-        color: rgba(255,255,255,0.7);
+        color: white;
         padding: 8px 0;
         position: absolute;
         top: 0;
@@ -250,7 +250,7 @@ a.button4 {
         width: 110px;
         display: block;
         margin: 0 auto;
-        color: rgba(255,255,255,0.7);
+        color: white;
         padding: 8px 0;
         position: absolute;
         top: 0;
@@ -263,7 +263,7 @@ a.button4 {
         width: 110px;
         display: block;
         margin: 0 auto;
-        color: rgba(255,255,255,0.7);
+        color: white;
         padding: 8px 0;
         position: absolute;
         top: 0;
@@ -276,7 +276,7 @@ a.button4 {
         width: 110px;
         display: block;
         margin: 0 auto;
-        color: rgba(255,255,255,0.7);
+        color: white;
         padding: 8px 0;
         position: absolute;
         top: 0;
