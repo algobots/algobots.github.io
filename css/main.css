@@ -73,6 +73,9 @@ h1, h2, h3, h4 {
     margin: 0 auto;
     visibility: hidden;
     opacity: 0;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility:    hidden;
+    -ms-backface-visibility:     hidden;
 }
 
 .hide {
@@ -94,7 +97,7 @@ h1, h2, h3, h4 {
 
 
 /*=============
-LOGO
+    LOGO
 =============*/
 
 #headOutline {
@@ -127,7 +130,7 @@ LOGO
 }
 
 /*=============
-PLEDGE
+    PLEDGE
 =============*/
 
 .pledge {
@@ -191,7 +194,7 @@ PLEDGE
 }
 
 /*=============
-PRICING
+    PRICING
 =============*/
 
 .pricing {
@@ -300,8 +303,26 @@ PRICING
     right: 146px;
     top: 10px;      
 }
+
 /*=============
-Button code
+    CONTACT
+=============*/
+
+.contact {
+    height: 504px;
+    width: 490px;
+    margin: auto;
+    top: 100px;
+}
+
+.contactTitle {
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+/*=============
+    BUTTON 
 =============*/
 
 .button-container {
@@ -361,6 +382,8 @@ a.button4 {
     top: 0;
     left: 140px;
     /*transform: translateX(-65%);*/
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
 }
 
 .bp {

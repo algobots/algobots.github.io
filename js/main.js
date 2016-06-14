@@ -37,6 +37,7 @@
 
    tlProjects
    		.set($wrapper, {autoAlpha: 1});
+   		// .set($wrapper, {perspective: 10000});
 
 
 
@@ -156,29 +157,29 @@
   $button1.hover(
     function() {
       if($button1.attr('class').split(' ')[1] === 'inactive') {
-        TweenLite.to($bp1, 0.1, {scale:1.2});  
+        TweenLite.to($bp1, 0.05, {scale:1.1});  
       } 
     },
     function() {
-      TweenLite.to($bp1, 0.4, {scale:1});
+      TweenLite.to($bp1, 0.05, {scale:1});
     }
   );
 
   $button2.hover(
     function() {
       if($button2.attr('class').split(' ')[1] === 'inactive') {
-        TweenLite.to($bp2, 0.1, {scale:1.2});  
+        TweenLite.to($bp2, 0.1, {scale:1.1});  
       } 
     },
     function() {
-      TweenLite.to($bp2, 0.4, {scale:1});
+      TweenLite.to($bp2, 0.05, {scale:1});
     }
   );
 
   $button3.hover(
     function() {
       if($button3.attr('class').split(' ')[1] === 'inactive') {
-        TweenLite.to($bp3, 0.1, {scale:1.2});  
+        TweenLite.to($bp3, 0.05, {scale:1.1});  
       } 
     },
     function() {
@@ -189,7 +190,7 @@
   $button4.hover(
     function() {
       if($button4.attr('class').split(' ')[1] === 'inactive') {
-        TweenLite.to($bp4, 0.1, {scale:1.2});  
+        TweenLite.to($bp4, 0.05, {scale:1.1});  
       } 
     },
     function() {
