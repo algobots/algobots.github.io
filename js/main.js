@@ -28,10 +28,19 @@
       $bp1           = $('.bp1'),
       $bp2           = $('.bp2'),
       $bp3           = $('.bp3'),
-      $bp4           = $('.bp4')
+      $bp4           = $('.bp4'),
+      $wrapper 		= ($('.wrapper'))
 
 	 mainTl = new TimelineMax();
    
+   var tlProjects = new TimelineMax();
+
+   tlProjects
+   		.set($wrapper, {autoAlpha: 1});
+
+
+
+
    // ===================
    // =ANIMATION HELPERS
    // ===================
@@ -147,7 +156,7 @@
   $button1.hover(
     function() {
       if($button1.attr('class').split(' ')[1] === 'inactive') {
-        TweenLite.to($bp1, 0.2, {scale:1.2});  
+        TweenLite.to($bp1, 0.1, {scale:1.2});  
       } 
     },
     function() {
@@ -158,7 +167,7 @@
   $button2.hover(
     function() {
       if($button2.attr('class').split(' ')[1] === 'inactive') {
-        TweenLite.to($bp2, 0.2, {scale:1.2});  
+        TweenLite.to($bp2, 0.1, {scale:1.2});  
       } 
     },
     function() {
@@ -169,7 +178,7 @@
   $button3.hover(
     function() {
       if($button3.attr('class').split(' ')[1] === 'inactive') {
-        TweenLite.to($bp3, 0.2, {scale:1.2});  
+        TweenLite.to($bp3, 0.1, {scale:1.2});  
       } 
     },
     function() {
@@ -180,7 +189,7 @@
   $button4.hover(
     function() {
       if($button4.attr('class').split(' ')[1] === 'inactive') {
-        TweenLite.to($bp4, 0.2, {scale:1.2});  
+        TweenLite.to($bp4, 0.1, {scale:1.2});  
       } 
     },
     function() {

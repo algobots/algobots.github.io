@@ -60,6 +60,8 @@ body {
     font: 16px/1.5 'Ubuntu';
     background-color: #FEC825;
     color: #39302E;
+    overflow: hidden;
+    height: 100%;
 }
 
 h1, h2, h3, h4 {
@@ -69,21 +71,30 @@ h1, h2, h3, h4 {
 .wrapper {
     width: 90%;
     margin: 0 auto;
-    position: fixed;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -30%);
-    text-align: center;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .hide {
     visibility: hidden;
-    width: 0;
-    height: 0;
+    width: 0px !important;
+    height: 0px !important;
+    margin: 0 !important;
 }
 
+.project {
+    text-align: center;
+    position: fixed;
+    top: 46%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+
 /*=============
-Logo
+LOGO
 =============*/
 
 #headOutline {
@@ -112,11 +123,11 @@ Logo
 }
 
 .logo {
-    margin-left: 5px;
+    
 }
 
 /*=============
-Pledge
+PLEDGE
 =============*/
 
 .pledge {
@@ -180,14 +191,124 @@ Pledge
 }
 
 /*=============
+PRICING
+=============*/
+
+.pricing {
+    height: 504px;
+    width: 490px;
+    margin: auto;
+    top: 100px;
+    text-align: left;
+}
+
+.pricingOne-container {
+    width: 490px;
+    height: 168px;
+    position: absolute;
+}
+
+.pricingTwo-container {
+    width: 490px;
+    height: 168px;
+    position: absolute;
+    top: 168px;
+}
+
+.pricingThree-container {
+    width: 490px;
+    height: 168px;
+    position: absolute;
+    top: 336px;
+}
+
+
+.pricingOne {
+    font-size: 40px;
+    width: 60px;
+    float: left;
+    margin: auto;
+    position: relative;
+    left: 93px;
+}
+
+.pricingTwo {
+    font-size: 40px;
+    width: 60px;
+    float: left;
+    margin: auto;
+    position: relative;
+    left: 93px;
+}
+
+.pricingThree {
+    font-size: 40px;
+    width: 60px;
+    float: left;
+    margin: auto;
+    position: relative;
+    left: 93px;
+}
+
+.pricingOneBlurb {
+    margin: auto;
+    float: right;
+    width: 200px;
+    position: relative;
+    top: 50px;
+    left: 100px;
+}
+
+.pricingTwoBlurb {
+    margin: auto;
+    float: right;
+    width: 200px;
+    position: relative;
+    top: 50px;
+    left: 162px;    
+}
+
+.pricingThreeBlurb {
+    margin: auto;
+    float: right;
+    width: 200px;
+    position: relative;
+    top: 50px;
+    left: 55px;
+}
+
+.pricingOneTitle {
+    float: right;
+    margin: auto;
+    position: relative;
+    right: 100px;
+    top: 10px;
+}
+
+.pricingTwoTitle {
+    float: right;
+    margin: auto;
+    position: relative;
+    right: 37px;
+    top: 10px;   
+}
+
+.pricingThreeTitle {
+    float: right;
+    margin: auto;
+    position: relative;
+    right: 146px;
+    top: 10px;      
+}
+/*=============
 Button code
 =============*/
 
 .button-container {
+    text-align: center;
     position: fixed;    
-    width: 489px;
     left: 50%;
-    transform: translateX(-50%);
+    margin-top: 10px;
 }
 
 a.button1 {
@@ -199,7 +320,7 @@ a.button1 {
     padding: 8px 0;
     position: absolute;
     top: 0;
-    left: 0px;
+    left: -238px;
     /*transform: translateX(-30%);*/
 }
 
@@ -212,7 +333,7 @@ a.button2 {
     padding: 8px 0;
     position: absolute;
     top: 0;
-    left: 126px;
+    left: -112px;
     /*transform: translateX(-40%);*/
 }
 
@@ -225,7 +346,7 @@ a.button3 {
     padding: 8px 0;
     position: absolute;
     top: 0;
-    left: 251px;
+    left: 13px;
     /*transform: translateX(-50%);*/
 }
 
@@ -238,7 +359,7 @@ a.button4 {
     padding: 8px 0;
     position: absolute;
     top: 0;
-    left: 378px;
+    left: 140px;
     /*transform: translateX(-65%);*/
 }
 
@@ -289,64 +410,9 @@ a.button4 {
 
 @media only screen and (min-width: 1000px) {
 
-    a.button1 {
-        text-decoration: none;
-        width: 110px;
-        display: block;
-        margin: 0 auto;
-        color: white;
-        padding: 8px 0;
-        position: absolute;
-        top: 0;
-        left: 0px;
-        /*transform: translateX(-30%);*/
-    }
+   
 
-    a.button2 {
-        text-decoration: none;
-        width: 110px;
-        display: block;
-        margin: 0 auto;
-        color: white;
-        padding: 8px 0;
-        position: absolute;
-        top: 0;
-        left: 126px;
-        /*transform: translateX(-40%);*/
-    }
 
-    a.button3 {
-        text-decoration: none;
-        width: 110px;
-        display: block;
-        margin: 0 auto;
-        color: white;
-        padding: 8px 0;
-        position: absolute;
-        top: 0;
-        left: 251px;
-        /*transform: translateX(-50%);*/
-    }
-
-    a.button4 {
-        text-decoration: none;
-        width: 110px;
-        display: block;
-        margin: 0 auto;
-        color: white;
-        padding: 8px 0;
-        position: absolute;
-        top: 0;
-        left: 378px;
-        /*transform: translateX(-65%);*/
-    }
-
-    .button-container {
-        position: absolute;
-        width: 489px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
 }
 
 @media print,
