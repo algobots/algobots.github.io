@@ -208,7 +208,7 @@
 
   $button1.hover(
     function() {
-      if($button1.attr('class').split(' ')[1] === 'inactive') {
+      if($button1.attr('class').split(' ')[1] !== 'active') {
         TweenLite.to($bp1, 0.05, {scale:1.1});  
       } 
     },
@@ -219,7 +219,7 @@
 
   $button2.hover(
     function() {
-      if($button2.attr('class').split(' ')[1] === 'inactive') {
+      if($button2.attr('class').split(' ')[1] !== 'active') {
         TweenLite.to($bp2, 0.1, {scale:1.1});  
       } 
     },
@@ -230,7 +230,7 @@
 
   $button3.hover(
     function() {
-      if($button3.attr('class').split(' ')[1] === 'inactive') {
+      if($button3.attr('class').split(' ')[1] !== 'active') {
         TweenLite.to($bp3, 0.05, {scale:1.1});  
       } 
     },
@@ -241,7 +241,7 @@
 
   $button4.hover(
     function() {
-      if($button4.attr('class').split(' ')[1] === 'inactive') {
+      if($button4.attr('class').split(' ')[1] !== 'active') {
         TweenLite.to($bp4, 0.05, {scale:1.1});  
       } 
     },

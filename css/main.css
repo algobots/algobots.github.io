@@ -143,6 +143,8 @@ h1, h2, h3, h4 {
 
 .security-container {
     height: 220px;
+    position: relative;
+    top: 43px;
 }
 
 .securityTitle {
@@ -169,7 +171,8 @@ h1, h2, h3, h4 {
 
 .trust-container {
     height: 270px;    
-
+    position: relative;
+    top: 40px;
 }
 
 .trustImage {
@@ -210,26 +213,27 @@ h1, h2, h3, h4 {
 .pricingOne-container {
     width: 490px;
     height: 168px;
-    position: absolute;
+    position: relative;
+    top: 50px;
 }
 
 .pricingTwo-container {
     width: 490px;
     height: 168px;
     position: absolute;
-    top: 168px;
+    top: 224px;
 }
 
 .pricingThree-container {
     width: 490px;
     height: 168px;
     position: absolute;
-    top: 336px;
+    top: 385px;
 }
 
 
 .pricingOne {
-    font-size: 40px;
+    font-size: 50px;
     width: 60px;
     float: left;
     margin: auto;
@@ -238,7 +242,7 @@ h1, h2, h3, h4 {
 }
 
 .pricingTwo {
-    font-size: 40px;
+    font-size: 50px;
     width: 60px;
     float: left;
     margin: auto;
@@ -247,7 +251,7 @@ h1, h2, h3, h4 {
 }
 
 .pricingThree {
-    font-size: 40px;
+    font-size: 50px;
     width: 60px;
     float: left;
     margin: auto;
