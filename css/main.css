@@ -331,6 +331,7 @@ h1, h2, h3, h4 {
     text-align: center;
     position: fixed;    
     left: 50%;
+    margin-top: 30px;
 }
 
 a.button1 {

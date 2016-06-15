@@ -33,16 +33,22 @@
       $pledge 		= $('.pledge'),
       $pricing 		= $('.pricing'),
       $contact 		= $('.contact')
+      
+    var activeSection = $logo;
+    var activeButton = $button1;
 
 	mainTl = new TimelineMax();   
   	mainTl
-  		.set($wrapper, {autoAlpha:1});
+  		.set($wrapper, {autoAlpha:1})
+  		.set($pledge, {scale:0, autoAlpha: 0})
+  		.set($pricing, {scale:0, autoAlpha: 0})
+  		.set($contact, {scale:0, autoAlpha: 0});
 
    // ===================
    // =ANIMATION HELPERS
    // ===================
   
-  function loadLogo() {
+  function animateLogo() {
     var logoTl = new TimelineMax();
     
     logoTl
@@ -81,18 +87,20 @@
   function closeAnimation(element) {
     var closeTl = new TimelineMax()
     closeTl
-      .to(element, 0.4, {scale:0, autoAlpha: 0}); 
+      .to(element, 0.3, {scale:0, autoAlpha: 0}, '-=1'); 
     
     mainTl.add(closeTl);
   }
 
-  function setHideActiveClasses(section) {
+  function hideSection(section) {
   	mainTl
-  		.set([$pledge, $logo, $pricing, $contact], {className:'+=hide'})
-  		.set(section, {className:'-=hide'})
-  		// .set(activeSection, 0, {scale:1, autoAlpha:1});
+  		.set(section, {className:'+=hide'})
   }
 
+  function activateSection(section) {
+  	mainTl
+  		.set(section, {className:'-=hide'})
+  }
 
   function loadPledge() {
   	
@@ -114,57 +122,83 @@
       .to($lineMask,0,{width:152})
   }
 
-  function minimizeLogo() {
-    mainTl
-      .to($logo, 0.4, {scale:0.5, top:0, left:0})
+  function activateButton(button) {
+  	mainTl
+  		.set(button, {className:'+=active'})
   }
 
-  function handleButtonClick(button) {
-       mainTl
-	      .set([$button1, $button2, $button3, $button4], {className:'-=active'})
-	      .set([$button1, $button2, $button3, $button4], {className:'+=inactive'})
-	      .set(button, {className:'+=active'})
-	      .set(button, {className:'-=inactive'})
+  function deactivateButton(button) {
+  	mainTl
+  		.set(button, {className:'-=active'})
   }
-
-
-
 
   // =======================
   // =ONCLICK FUNCTIONS
   // =======================
 
   $button1.on('click', function (e) {
-  	if($button1.attr('class').split(' ')[1] === 'inactive') {
-  		handleButtonClick($button1);
-  		closeAnimation($pledge);
-  		setHideActiveClasses($logo); 
-  		resetSection($logo);
-  		loadLogo();
-  	} else {
+  	if($button1.attr('class').split(' ')[1] === 'active') {
   		console.log('active button');
+  	} else {
+  		deactivateButton(activeButton);
+  		activateButton($button1);
+  		closeAnimation(activeSection);
+  		hideSection(activeSection);
+  		activateSection($logo);
+  		resetSection($logo);
+  		animateLogo();
+
+  		activeSection = $logo;
+  		activeButton = $button1;
   	}
   });
 
   $button2.on('click', function (e) {
-    if($button2.attr('class').split(' ')[1] === 'inactive') {
-  		handleButtonClick($button2);
-		closeAnimation($logo);
-		setHideActiveClasses($pledge);  
+    if($button2.attr('class').split(' ')[1] === 'active') {
+  		console.log('active button');
+  	} else {
+		deactivateButton(activeButton);
+  		activateButton($button2);
+		closeAnimation(activeSection);
+		hideSection(activeSection);
+		activateSection($pledge);
 		resetSection($pledge);
 
-			
-  	} else {
-  		console.log('active button');
+		activeSection = $pledge;
+		activeButton = $button2;
   	}
   });
 
   $button3.on('click', function (e) {
-    handleButtonClick($button3);
+    if($button3.attr('class').split(' ')[1] === 'active') {
+  		console.log('active button');
+  	} else {
+  		deactivateButton(activeButton);
+  		activateButton($button3);
+		closeAnimation(activeSection);
+		hideSection(activeSection);
+		activateSection($pricing);
+		resetSection($pricing);
+		
+		activeSection = $pricing;
+		activeButton = $button3;
+  	}
   });
 
   $button4.on('click', function (e) {
-    handleButtonClick($button4);
+    if($button4.attr('class').split(' ')[1] === 'active') {
+  		console.log('active button');
+  	} else {
+  		deactivateButton(activeButton);
+  		activateButton($button4);
+		closeAnimation(activeSection);
+		hideSection(activeSection);
+		activateSection($contact);
+		resetSection($contact);
+		
+		activeSection = $contact;
+  		activeButton = $button4;
+  	}
   });
 
 
@@ -221,7 +255,7 @@
   // =======================
 
   //init
-  loadLogo();
+  animateLogo();
   loadButtons();
 
 })(jQuery);
