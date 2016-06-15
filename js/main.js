@@ -86,10 +86,11 @@
     mainTl.add(closeTl);
   }
 
-  function setHideActiveClasses(activeSection) {
+  function setHideActiveClasses(section) {
   	mainTl
   		.set([$pledge, $logo, $pricing, $contact], {className:'+=hide'})
-  		.set(activeSection, {className:'-=hide'})
+  		.set(section, {className:'-=hide'})
+  		// .set(activeSection, 0, {scale:1, autoAlpha:1});
   }
 
 
@@ -107,9 +108,9 @@
     
   }
 
-  function resetLogo() {
+  function resetSection(section) {
     mainTl
-      .to($logo, 0, {scale:1, autoAlpha: 1})
+      .to(section, 0, {scale:1, autoAlpha: 1})
       .to($lineMask,0,{width:152})
   }
 
@@ -136,6 +137,10 @@
   $button1.on('click', function (e) {
   	if($button1.attr('class').split(' ')[1] === 'inactive') {
   		handleButtonClick($button1);
+  		closeAnimation($pledge);
+  		setHideActiveClasses($logo); 
+  		resetSection($logo);
+  		loadLogo();
   	} else {
   		console.log('active button');
   	}
@@ -145,7 +150,10 @@
     if($button2.attr('class').split(' ')[1] === 'inactive') {
   		handleButtonClick($button2);
 		closeAnimation($logo);
-		setHideActiveClasses($pledge);  	
+		setHideActiveClasses($pledge);  
+		resetSection($pledge);
+
+			
   	} else {
   		console.log('active button');
   	}
