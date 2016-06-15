@@ -39,17 +39,31 @@
       $securityBlurb = $('.securityBlurb'),
       $trustImage = $('.trustImage'),
       $trustTitle = $('.trustTitle'),
-      $trustBlurb = $('.trustBlurb')
+      $trustBlurb = $('.trustBlurb'),
       
-    var activeSection = $logo;
-    var activeButton = $button1;
+      $pricingOne = $('.pricingOne'), 
+      $pricingOneTitle = $('.pricingOneTitle'), 
+      $pricingOneBlurb = $('.pricingOneBlurb'),
+      
+      $pricingTwo = $('.pricingTwo'), 
+      $pricingTwoTitle = $('.pricingTwoTitle'), 
+      $pricingTwoBlurb = $('.pricingTwoBlurb'),
+
+      $pricingThree = $('.pricingThree'), 
+      $pricingThreeTitle = $('.pricingThreeTitle'), 
+      $pricingThreeBlurb = $('.pricingThreeBlurb'),
+
+      $contactTitle = $('.contactTitle')
+
+  var activeSection = $logo;
+  var activeButton = $button1;
 
 	mainTl = new TimelineMax();   
-  	mainTl
-  		.set($wrapper, {autoAlpha:1})
-  		.set($pledge, {scale:0, autoAlpha: 0})
-  		.set($pricing, {scale:0, autoAlpha: 0})
-  		.set($contact, {scale:0, autoAlpha: 0});
+	mainTl
+		.set($wrapper, {autoAlpha:1})
+		.set($pledge, {scale:0, autoAlpha: 0})
+		.set($pricing, {scale:0, autoAlpha: 0})
+		.set($contact, {scale:0, autoAlpha: 0});
 
    // ===================
    // =ANIMATION HELPERS
@@ -91,6 +105,35 @@
       .add('button')
   }
 
+  function animatePledge() {
+  	var pledgeTl = new TimelineMax();
+  	pledgeTl
+  		.fromTo([$securityImage, $trustImage], 0.4, {opacity:0, scale:0}, {opacity:1, scale: 1, ease: Back.easeOut})
+  		.fromTo([$securityTitle, $trustTitle], 0.2, {xPercent:'+200', opacity: 0}, {xPercent:'0', opacity:1})
+  		.fromTo([$securityBlurb, $trustBlurb], 0.2, {xPercent:'+200', opacity:0}, {xPercent:'0', opacity:1})
+
+  	mainTl.add(pledgeTl);
+  }
+
+  function animatePricing() {
+    var pricingTl = new TimelineMax();
+
+    pricingTl 
+      .staggerFromTo([$pricingOne, $pricingTwo, $pricingThree], 0.3, {autoAlpha:0, scale:0}, {autoAlpha: 1, scale: 1}, 0.1)
+    	.staggerFromTo([$pricingOneTitle, $pricingTwoTitle, $pricingThreeTitle], 0.3, {autoAlpha:0, scale:0}, {autoAlpha: 1, scale: 1}, 0.1)
+      .staggerFromTo([$pricingOneBlurb, $pricingTwoBlurb, $pricingThreeBlurb], 0.3, {autoAlpha:0, scale:0}, {autoAlpha: 1, scale: 1}, 0.1)
+
+    mainTl.add(pricingTl);
+  }
+
+  function animateContact() {
+    var animateTl = new TimelineMax();
+    animateTl
+      .fromTo($contactTitle, 0.4, {scale:0, autoAlpha:0}, {scale:1, autoAlpha:1})
+
+    mainTl.add(animateTl);
+  }
+
   function closeAnimation(element) {
     var closeTl = new TimelineMax()
     closeTl
@@ -107,30 +150,6 @@
   function activateSection(section) {
   	mainTl
   		.set(section, {className:'-=hide'})
-  }
-
-  function animatePledge() {
-  	
-  	console.log('animating pledge');
-
-  	var pledgeTl = new TimelineMax();
-
-  	pledgeTl
-  		// .set([$trustBlurb, $trustTitle, $trustImage], {autoAlpha:0, scale:0})
-  		// .set([$securityTitle, $securityBlurb], {xPercent: '+100'})
-  		.fromTo([$securityImage, $trustImage], 0.4, {opacity:0, scale:0}, {opacity:1, scale: 1, ease: Back.easeOut})
-  		.fromTo([$securityTitle, $trustTitle], 0.2, {xPercent:'+200', opacity: 0}, {xPercent:'0', opacity:1})
-  		.fromTo([$securityBlurb, $trustBlurb], 0.2, {xPercent:'+200', opacity:0}, {xPercent:'0', opacity:1})
-  		// .fromTo($trustImage, 0.4, {opacity:0, scale:0}, {opacity:1, scale: 1, ease: Back.easeOut})
-  		// .fromTo($trustTitle, 0.2, {xPercent:'+200', opacity: 0}, {xPercent:'0', opacity:1})
-  		// .fromTo($trustBlurb, 0.2, {xPercent:'+200', opacity:0}, {xPercent:'0', opacity:1})
-
-  	mainTl.add(pledgeTl);
-  }
-
-
-  function loadPricing() {
-    
   }
 
   function resetSection(section) {
@@ -156,7 +175,7 @@
   $button1.on('click', function (e) {
 
   	if(e.preventDefault) {
-		e.preventDefault();
+		  e.preventDefault();
   	} else {
     	e.returnValue = false;
   	}
@@ -180,7 +199,7 @@
   $button2.on('click', function (e) {
     
     if(e.preventDefault) {
-		e.preventDefault();
+		  e.preventDefault();
   	} else {
     	e.returnValue = false;
   	}
@@ -188,22 +207,22 @@
     if($button2.attr('class').split(' ')[1] === 'active') {
   		console.log('active button');
   	} else {
-		deactivateButton(activeButton);
+  		deactivateButton(activeButton);
   		activateButton($button2);
-		closeAnimation(activeSection);
-		hideSection(activeSection);
-		activateSection($pledge);
-		resetSection($pledge);
-		animatePledge();
-		activeSection = $pledge;
-		activeButton = $button2;
+  		closeAnimation(activeSection);
+  		hideSection(activeSection);
+  		activateSection($pledge);
+  		resetSection($pledge);
+  		animatePledge();
+  		activeSection = $pledge;
+  		activeButton = $button2;
   	}
   });
 
   $button3.on('click', function (e) {
     
   	if(e.preventDefault) {
-		e.preventDefault();
+		  e.preventDefault();
   	} else {
     	e.returnValue = false;
   	}
@@ -213,13 +232,14 @@
   	} else {
   		deactivateButton(activeButton);
   		activateButton($button3);
-		closeAnimation(activeSection);
-		hideSection(activeSection);
-		activateSection($pricing);
-		resetSection($pricing);
-		
-		activeSection = $pricing;
-		activeButton = $button3;
+  		closeAnimation(activeSection);
+  		hideSection(activeSection);
+  		activateSection($pricing);
+  		resetSection($pricing);
+  		animatePricing();
+
+  		activeSection = $pricing;
+  		activeButton = $button3;
   	}
   });
 
@@ -236,12 +256,13 @@
   	} else {
   		deactivateButton(activeButton);
   		activateButton($button4);
-		closeAnimation(activeSection);
-		hideSection(activeSection);
-		activateSection($contact);
-		resetSection($contact);
-		
-		activeSection = $contact;
+  		closeAnimation(activeSection);
+  		hideSection(activeSection);
+  		activateSection($contact);
+  		resetSection($contact);
+      animateContact();
+  		
+  		activeSection = $contact;
   		activeButton = $button4;
   	}
   });
