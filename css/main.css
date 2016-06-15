@@ -150,7 +150,8 @@ h1, h2, h3, h4 {
 .securityTitle {
     float: right;
     position: relative;
-    right: 182px;
+    right: 161px;
+    font-size: 30px;
     
 }
 
@@ -185,8 +186,9 @@ h1, h2, h3, h4 {
 .trustTitle {
     float: right;
     position: relative;
-    right: 226px;
-    top: 20px;
+    right: 211px;
+    top: 30px;
+    font-size: 30px;
 }
 
 .trustBlurb {
