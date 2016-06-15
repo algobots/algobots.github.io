@@ -29,27 +29,23 @@
       $bp2           = $('.bp2'),
       $bp3           = $('.bp3'),
       $bp4           = $('.bp4'),
-      $wrapper 		= ($('.wrapper'))
+      $wrapper 		= $('.wrapper'),
+      $pledge 		= $('.pledge'),
+      $pricing 		= $('.pricing'),
+      $contact 		= $('.contact')
 
-	 mainTl = new TimelineMax();
-   
-   var tlProjects = new TimelineMax();
-
-   tlProjects
-   		.set($wrapper, {autoAlpha: 1});
-   		// .set($wrapper, {perspective: 10000});
-
-
-
+	mainTl = new TimelineMax();   
+  	mainTl
+  		.set($wrapper, {autoAlpha:1});
 
    // ===================
    // =ANIMATION HELPERS
    // ===================
   
   function loadLogo() {
-    var animateTl = new TimelineMax();
+    var logoTl = new TimelineMax();
     
-    animateTl
+    logoTl
       .set($leftEar, {autoAlpha: 0, xPercent: +50})
       .set($rightEar, {autoAlpha: 0, xPercent: -50})
       .fromTo($headOutline, 0.7, {opacity: 0, scale: 0.5, transformOrigin: "50% 50% 0"}, {scale: 1, opacity:1, ease:Back.easeOut}, '+=1')
@@ -69,11 +65,10 @@
       .fromTo($title, 0.5, {autoAlpha:0, scale:0}, {autoAlpha:1, scale:0.8, rotation: 0, ease: Power4.easeInOut})
       .to($title, 2, {scale:1})
       .add('title')
-      .fromTo($blurb1, 0.4, {xPercent: '-100'}, {xPercent:'0', ease: Power4.easeInOut}, '-=1')
-      // .to($blurb1, 1, {vars})
+      .fromTo($blurb1, 0.4, {xPercent: '-200'}, {xPercent:'0', ease: Power4.easeInOut}, '-=1')
       .add('blurb')
 
-    mainTl.add(animateTl);
+    mainTl.add(logoTl);
   }
 
   function loadButtons() {
@@ -90,6 +85,23 @@
     
     mainTl.add(closeTl);
   }
+
+  function setHideActiveClasses(activeSection) {
+  	mainTl
+  		.set([$pledge, $logo, $pricing, $contact], {className:'+=hide'})
+  		.set(activeSection, {className:'-=hide'})
+  }
+
+
+  function loadPledge() {
+  	
+
+  	var pledgeTl = new TimelineMax();
+
+  	pledgeTl
+  		.set()
+  }
+
 
   function loadPricing() {
     
@@ -108,23 +120,13 @@
 
   function handleButtonClick(button) {
        mainTl
-      .set([$button1, $button2, $button3, $button4], {className:'-=active'})
-      .set([$button1, $button2, $button3, $button4], {className:'+=inactive'})
-      .set(button, {className:'+=active'})
-      .set(button, {className:'-=inactive'})
+	      .set([$button1, $button2, $button3, $button4], {className:'-=active'})
+	      .set([$button1, $button2, $button3, $button4], {className:'+=inactive'})
+	      .set(button, {className:'+=active'})
+	      .set(button, {className:'-=inactive'})
   }
 
-  function over (button) {
-    
-    if($button1.attr('class').split(' ')[1] === 'inactive') {
-    
-        // TweenLite.to($(this), 0.4, {scale:1.1});
-    
-    
-        // TweenLite.to($(this), 0.4, {scale:1});
-    
-    }  
-  }
+
 
 
   // =======================
@@ -132,13 +134,21 @@
   // =======================
 
   $button1.on('click', function (e) {
-    // closeAnimation($logo);
-    handleButtonClick($button1);
+  	if($button1.attr('class').split(' ')[1] === 'inactive') {
+  		handleButtonClick($button1);
+  	} else {
+  		console.log('active button');
+  	}
   });
 
   $button2.on('click', function (e) {
-    handleButtonClick($button2);
-    closeAnimation($logo);
+    if($button2.attr('class').split(' ')[1] === 'inactive') {
+  		handleButtonClick($button2);
+		closeAnimation($logo);
+		setHideActiveClasses($pledge);  	
+  	} else {
+  		console.log('active button');
+  	}
   });
 
   $button3.on('click', function (e) {
