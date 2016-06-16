@@ -88,7 +88,7 @@ h1, h2, h3, h4 {
 .project {
     text-align: center;
     position: fixed;
-    top: 43%;
+    top: 36%;
     left: 0;
     bottom: 0;
     right: 0;
@@ -127,7 +127,7 @@ h1, h2, h3, h4 {
 
 .logo {
     height: 504px;
-    width: 490px;
+    width: 386px;
     margin: auto;
 }
 
@@ -137,7 +137,7 @@ h1, h2, h3, h4 {
 
 .pledge {
     height: 504px;
-    width: 490px;
+    width: 386px;
     margin: auto;
 }
 
@@ -150,24 +150,27 @@ h1, h2, h3, h4 {
 .securityTitle {
     float: right;
     position: relative;
-    right: 161px;
+    right: 125px;
     font-size: 30px;
     
 }
 
 .securityImage {
-    height: 177px;
+    /*height: 177px;*/
     position: relative;
     margin: auto;
     float: left;
     top: 20px;
+    visibility: hidden;
 }
 
 .securityBlurb {
     width: 61%;
     float: right;
     margin: auto;
-    text-align: left;
+    text-align: center;
+    left: -70px;
+    position: relative;
 } 
 
 .trust-container {
@@ -177,17 +180,21 @@ h1, h2, h3, h4 {
 }
 
 .trustImage {
-    position: relative;
+    /*position: relative;
     float: left;
     top: 40px;
-    left: -19px;
+    left: -19px;*/
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    
 }
 
 .trustTitle {
     float: right;
     position: relative;
-    right: 211px;
-    top: 30px;
+    right: 152px;
+    top: 42px;
     font-size: 30px;
 }
 
@@ -195,9 +202,10 @@ h1, h2, h3, h4 {
     width: 61%;
     float: right;
     margin: auto;
-    text-align: left;
-    top: 20px;
+    text-align: center;
+    top: 136px;
     position: relative;
+    left: 15px;
 }
 
 /*=============
@@ -206,7 +214,7 @@ h1, h2, h3, h4 {
 
 .pricing {
     height: 504px;
-    width: 490px;
+    width: 386px;
     margin: auto;
     top: 100px;
     text-align: left;
@@ -215,7 +223,7 @@ h1, h2, h3, h4 {
 .pricingOne-container {
     width: 490px;
     height: 168px;
-    position: relative;
+    position: absolute;
     top: 50px;
 }
 
@@ -240,7 +248,7 @@ h1, h2, h3, h4 {
     float: left;
     margin: auto;
     position: relative;
-    left: 93px;
+    left: 40px;
 }
 
 .pricingTwo {
@@ -249,7 +257,7 @@ h1, h2, h3, h4 {
     float: left;
     margin: auto;
     position: relative;
-    left: 93px;
+    left: 44px;
 }
 
 .pricingThree {
@@ -258,7 +266,7 @@ h1, h2, h3, h4 {
     float: left;
     margin: auto;
     position: relative;
-    left: 93px;
+    left: 44px;
 }
 
 .pricingOneBlurb {
@@ -267,7 +275,7 @@ h1, h2, h3, h4 {
     width: 200px;
     position: relative;
     top: 50px;
-    left: 100px;
+    left: -2px;
 }
 
 .pricingTwoBlurb {
@@ -276,7 +284,7 @@ h1, h2, h3, h4 {
     width: 200px;
     position: relative;
     top: 50px;
-    left: 162px;    
+    left: 62px;    
 }
 
 .pricingThreeBlurb {
@@ -285,14 +293,14 @@ h1, h2, h3, h4 {
     width: 200px;
     position: relative;
     top: 50px;
-    left: 55px;
+    left: -52px;
 }
 
 .pricingOneTitle {
     float: right;
     margin: auto;
     position: relative;
-    right: 100px;
+    right: 205px;
     top: 10px;
 }
 
@@ -300,7 +308,7 @@ h1, h2, h3, h4 {
     float: right;
     margin: auto;
     position: relative;
-    right: 37px;
+    right: 140px;
     top: 10px;   
 }
 
@@ -308,7 +316,7 @@ h1, h2, h3, h4 {
     float: right;
     margin: auto;
     position: relative;
-    right: 146px;
+    right: 253px;
     top: 10px;      
 }
 
@@ -318,15 +326,16 @@ h1, h2, h3, h4 {
 
 .contact {
     height: 504px;
-    width: 490px;
+    width: 386px;
     margin: auto;
     top: 100px;
 }
 
 .contactTitle {
-    top: 30%;
+    top: 54%;
     transform: translateY(-50%);
     position: relative;
+    left: -67px;
 }
 
 /*=============
@@ -338,6 +347,7 @@ h1, h2, h3, h4 {
     position: fixed;    
     left: 50%;
     margin-top: 30px;
+    transform: scale(0.7, 0.7);
 }
 
 a.button1 {
@@ -349,7 +359,7 @@ a.button1 {
     padding: 8px 0;
     position: absolute;
     top: 0;
-    left: -238px;
+    left: -246px;
     /*transform: translateX(-30%);*/
 }
 
@@ -362,7 +372,7 @@ a.button2 {
     padding: 8px 0;
     position: absolute;
     top: 0;
-    left: -112px;
+    left: -119px;
     /*transform: translateX(-40%);*/
 }
 
@@ -375,7 +385,7 @@ a.button3 {
     padding: 8px 0;
     position: absolute;
     top: 0;
-    left: 13px;
+    left: 7px;
     /*transform: translateX(-50%);*/
 }
 
@@ -388,7 +398,7 @@ a.button4 {
     padding: 8px 0;
     position: absolute;
     top: 0;
-    left: 140px;
+    left: 133px;
     /*transform: translateX(-65%);*/
     -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
@@ -441,7 +451,370 @@ a.button4 {
 
 @media only screen and (min-width: 1000px) {
 
-   
+   .wrapper {
+        width: 90%;
+        margin: 0 auto;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility:    hidden;
+        -ms-backface-visibility:     hidden;
+    }
+
+    .hide {
+        visibility: hidden;
+        width: 0px !important;
+        height: 0px !important;
+        margin: 0 !important;
+    }
+
+    .project {
+        text-align: center;
+        position: fixed;
+        top: 43%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+
+    /*=============
+        LOGO
+    =============*/
+
+    #headOutline {
+        z-index: 3;
+    }
+
+    #rightAntenna {
+        z-index: 2;
+    }
+
+    .title {   
+        padding-top: 30px;
+        /*padding-bottom: 10px;*/
+        margin: auto;
+        font-size: 40px;
+        
+    }
+
+    .blurb1 {
+        /*margin-bottom: 50px;*/
+    }
+
+    #lineMask {
+        position: absolute;
+        z-index: 1;
+    }
+
+    .logo {
+        height: 504px;
+        width: 490px;
+        margin: auto;
+    }
+
+    /*=============
+        PLEDGE
+    =============*/
+
+    .pledge {
+        height: 504px;
+        width: 490px;
+        margin: auto;
+    }
+
+    .security-container {
+        height: 220px;
+        position: relative;
+        top: 43px;
+    }
+
+    .securityTitle {
+        float: right;
+        position: relative;
+        right: 161px;
+        font-size: 30px;
+        
+    }
+
+    .securityImage {
+        height: 177px;
+        position: relative;
+        margin: auto;
+        float: left;
+        top: 20px;
+        visibility: visible;
+    }
+
+    .securityBlurb {
+        width: 61%;
+        float: right;
+        margin: auto;
+        text-align: left;
+        left: 0;
+    } 
+
+    .trust-container {
+        height: 270px;    
+        position: relative;
+        top: 40px;
+    }
+
+    .trustImage {
+        position: relative;
+        float: left;
+        top: 40px;
+        left: -19px;
+        visibility: visible;
+    }
+
+    .trustTitle {
+        float: right;
+        position: relative;
+        right: 211px;
+        top: 30px;
+        font-size: 30px;
+    }
+
+    .trustBlurb {
+        text-align: left;
+        top: 136px;
+        left: 94px;
+    }
+
+    /*=============
+        PRICING
+    =============*/
+
+    .pricing {
+        height: 504px;
+        width: 490px;
+        margin: auto;
+        top: 100px;
+        text-align: left;
+    }
+
+    .pricingOne-container {
+        width: 490px;
+        height: 168px;
+        position: relative;
+        top: 50px;
+    }
+
+    .pricingTwo-container {
+        width: 490px;
+        height: 168px;
+        position: absolute;
+        top: 224px;
+    }
+
+    .pricingThree-container {
+        width: 490px;
+        height: 168px;
+        position: absolute;
+        top: 385px;
+    }
+
+
+    .pricingOne {
+        font-size: 50px;
+        width: 60px;
+        float: left;
+        margin: auto;
+        position: relative;
+        left: 93px;
+    }
+
+    .pricingTwo {
+        font-size: 50px;
+        width: 60px;
+        float: left;
+        margin: auto;
+        position: relative;
+        left: 93px;
+    }
+
+    .pricingThree {
+        font-size: 50px;
+        width: 60px;
+        float: left;
+        margin: auto;
+        position: relative;
+        left: 93px;
+    }
+
+    .pricingOneBlurb {
+        margin: auto;
+        float: right;
+        width: 200px;
+        position: relative;
+        top: 50px;
+        left: 100px;
+    }
+
+    .pricingTwoBlurb {
+        margin: auto;
+        float: right;
+        width: 200px;
+        position: relative;
+        top: 50px;
+        left: 162px;    
+    }
+
+    .pricingThreeBlurb {
+        margin: auto;
+        float: right;
+        width: 200px;
+        position: relative;
+        top: 50px;
+        left: 55px;
+    }
+
+    .pricingOneTitle {
+        float: right;
+        margin: auto;
+        position: relative;
+        right: 100px;
+        top: 10px;
+    }
+
+    .pricingTwoTitle {
+        float: right;
+        margin: auto;
+        position: relative;
+        right: 37px;
+        top: 10px;   
+    }
+
+    .pricingThreeTitle {
+        float: right;
+        margin: auto;
+        position: relative;
+        right: 146px;
+        top: 10px;      
+    }
+
+    /*=============
+        CONTACT
+    =============*/
+
+    .contact {
+        height: 504px;
+        width: 490px;
+        margin: auto;
+        top: 100px;
+    }
+
+    .contactTitle {
+        top: 30%;
+        transform: translateY(-50%);
+        position: relative;
+        left: 0;
+    }
+
+    /*=============
+        BUTTON 
+    =============*/
+
+    .button-container {
+        transform: scale(1,1);
+    }
+
+    a.button1 {
+        text-decoration: none;
+        width: 108px;
+        display: block;
+        margin: 0 auto;
+        color: white;
+        padding: 8px 0;
+        position: absolute;
+        top: 0;
+        left: -238px;
+        /*transform: translateX(-30%);*/
+    }
+
+    a.button2 {
+        text-decoration: none;
+        width: 108px;
+        display: block;
+        margin: 0 auto;
+        color: white;
+        padding: 8px 0;
+        position: absolute;
+        top: 0;
+        left: -112px;
+        /*transform: translateX(-40%);*/
+    }
+
+    a.button3 {
+        text-decoration: none;
+        width: 108px;
+        display: block;
+        margin: 0 auto;
+        color: white;
+        padding: 8px 0;
+        position: absolute;
+        top: 0;
+        left: 13px;
+        /*transform: translateX(-50%);*/
+    }
+
+    a.button4 {
+        text-decoration: none;
+        width: 108px;
+        display: block;
+        margin: 0 auto;
+        color: white;
+        padding: 8px 0;
+        position: absolute;
+        top: 0;
+        left: 140px;
+        /*transform: translateX(-65%);*/
+        -webkit-transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden;
+    }
+
+    .bp {
+        width: 37px;
+        height: 100%;
+        border: 2px rgba(255,255,255,1) solid;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    .active>.bp {
+        border:none;
+        background-color: #39302E;
+    }
+
+    .bp-mid {
+        left: 36px;
+        border-width: 2.5px 0;
+    }
+
+    .bp-left {
+        border-width: 2.5px 0 2.5px 2.5px;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+
+    .bp-right {
+        left: 72px;
+        right: 0;
+        border-width: 2.5px 2.5px 2.5px 0;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    .bp-text {
+        position: relative;
+        font-weight: bold;
+        font-size: 16px;
+        z-index:1;
+    }
 
 
 }

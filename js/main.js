@@ -92,7 +92,7 @@
       .fromTo($title, 0.5, {autoAlpha:0, scale:0}, {autoAlpha:1, scale:0.8, rotation: 0, ease: Power4.easeInOut})
       .to($title, 2, {scale:1})
       .add('title')
-      .fromTo($blurb1, 0.4, {xPercent: '-200'}, {xPercent:'0', ease: Power4.easeInOut}, '-=1')
+      .fromTo($blurb1, 0.4, {xPercent: '-100', opacity:0}, {xPercent:'0', opacity:1, ease: Power4.easeInOut}, '-=1')
       .add('blurb')
 
     mainTl.add(logoTl);
