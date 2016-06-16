@@ -579,7 +579,7 @@ a.button4 {
 
     .trustBlurb {
         text-align: left;
-        top: 136px;
+        top: 126px;
         left: 94px;
     }
 
@@ -711,6 +711,7 @@ a.button4 {
         transform: translateY(-50%);
         position: relative;
         left: 0;
+        font-size: 25px;
     }
 
     /*=============
