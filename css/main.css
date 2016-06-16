@@ -450,7 +450,7 @@ a.button4 {
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 768px) {
 
    .wrapper {
         width: 90%;
@@ -607,7 +607,7 @@ a.button4 {
         width: 490px;
         height: 168px;
         position: absolute;
-        top: 224px;
+        top: 209px;
     }
 
     .pricingThree-container {
@@ -624,7 +624,7 @@ a.button4 {
         float: left;
         margin: auto;
         position: relative;
-        left: 93px;
+        left: 84px;
     }
 
     .pricingTwo {
