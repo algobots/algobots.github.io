@@ -118,7 +118,7 @@ h1, h2, h3, h4 {
 }
 
 .blurb1 {
-    /*margin-bottom: 50px;*/
+    margin-top: 50;
 }
 
 #lineMask {
@@ -347,7 +347,7 @@ h1, h2, h3, h4 {
     text-align: center;
     position: fixed;    
     left: 50%;
-    margin-top: 36px;
+    margin-top: 25px;
     transform: scale(0.7, 0.7);
 }
 
